@@ -5,5 +5,6 @@ end
 
 get '/:word' do
   @word = params[:word]
+  @words = Word.anagrams(params[:word])
   erb :index
 end

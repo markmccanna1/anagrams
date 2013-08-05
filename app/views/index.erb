@@ -2,9 +2,8 @@
   <p>Show a list of anagrams for "<%= @word %>"</p>
 
   <ul>
-
-    <% Word.anagrams(@word).uniq!.each do |i|%>
-        <li> <%= i.word %> </li>
+    <% @words.each do |word| %>
+        <%= erb :_word_li, layout: false, locals: { word: word } %>
     <% end %>
   </ul>
 </div>
