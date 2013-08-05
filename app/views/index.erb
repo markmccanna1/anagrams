@@ -1,0 +1,10 @@
+<div class="container">
+  <p>Show a list of anagrams for "<%= @word %>"</p>
+
+  <ul>
+
+    <% Word.anagrams(@word).uniq!.each do |i|%>
+        <li> <%= i.word %> </li>
+    <% end %>
+  </ul>
+</div>
